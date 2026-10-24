@@ -37,7 +37,7 @@ export const siteConfig: SiteConfig = {
   /** Anzeigename im Header, Footer, Titel und OG-Bild. */
   name: "BoardSight",
   /** Rechtlicher Name, z. B. für Impressum und strukturierte Daten. */
-  legalName: "Verein BoardSight",
+  legalName: "BoardSight",
   description:
     "BoardSight aus Zürich verbindet Geschäftsleitung, Reporting und Verwaltungsrat. Mit BoardLens entsteht Ihr Board-Reporting automatisch aus der Buchhaltung, KI-gestützt und in der Schweiz gehostet.",
   /** Basis-URL, wird aus NEXT_PUBLIC_SITE_URL bzw. der Vercel-Umgebung gelesen. */
