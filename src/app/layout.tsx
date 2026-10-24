@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   applicationName: siteConfig.name,
   formatDetection: { telephone: false },
+  robots: siteConfig.allowIndexing ? { index: true, follow: true } : { index: false, follow: false },
 };
 
 export const viewport: Viewport = {

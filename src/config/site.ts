@@ -18,6 +18,7 @@ type SiteConfig = {
   legalName: string;
   description: string;
   url: string;
+  allowIndexing: boolean;
   locale: string;
   boardPackageUrl: string;
   contact: {
@@ -41,6 +42,11 @@ export const siteConfig: SiteConfig = {
     "BoardSight aus Zürich verbindet Geschäftsleitung, Reporting und Verwaltungsrat. Mit BoardLens entsteht Ihr Board-Reporting automatisch aus der Buchhaltung, KI-gestützt und in der Schweiz gehostet.",
   /** Basis-URL, wird aus NEXT_PUBLIC_SITE_URL bzw. der Vercel-Umgebung gelesen. */
   url: resolveSiteUrl(),
+  /**
+   * Suchmaschinen erlauben. Gesteuert über NEXT_PUBLIC_ALLOW_INDEXING=true (z. B. in Vercel).
+   * Erst einschalten, wenn Impressum und Datenschutzerklärung vollständig sind.
+   */
+  allowIndexing: process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true",
   locale: "de-CH",
 
   /**

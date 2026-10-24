@@ -93,7 +93,7 @@ Farben stehen als CSS-Variablen in `src/app/globals.css` (`:root`) und werden in
 
 1. Repository auf GitHub (oder GitLab/Bitbucket) pushen.
 2. Auf [vercel.com](https://vercel.com) **Add New → Project** wählen und das Repository importieren. Vercel erkennt Next.js automatisch. Liegt das Projekt in einem Unterordner, unter **Root Directory** den Ordner `website` angeben.
-3. Unter **Settings → Environment Variables** `NEXT_PUBLIC_SITE_URL` setzen, sobald die endgültige Domain feststeht (z. B. `https://www.firma.ch`).
+3. Unter **Settings → Environment Variables** `NEXT_PUBLIC_ALLOW_INDEXING` erst dann auf `true` setzen, wenn Impressum und Datenschutz vollständig sind (sonst bleibt die Seite für Suchmaschinen gesperrt). Zudem `NEXT_PUBLIC_SITE_URL` setzen, sobald die endgültige Domain feststeht (z. B. `https://www.firma.ch`).
 4. **Deploy** auslösen. Jeder Push auf den Hauptzweig erzeugt ein neues Produktions-Deployment, andere Zweige ein Preview-Deployment.
 
 Alternativ mit der CLI:
