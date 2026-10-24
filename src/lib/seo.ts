@@ -13,7 +13,7 @@ export function pageMetadata({ title, description, path }: PageMetaInput): Metad
   const desc = description ?? siteConfig.description;
   const fullTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
   // Unterseiten überschreiben openGraph komplett, deshalb das OG-Bild explizit setzen.
-  const images = [{ url: "/opengraph-image", width: 1200, height: 630, alt: siteConfig.name }];
+  const images = [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: siteConfig.name }];
   return {
     title: title ?? { absolute: siteConfig.name },
     description: desc,

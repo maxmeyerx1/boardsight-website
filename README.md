@@ -75,7 +75,7 @@ Wichtig vor dem Livegang:
 - **Wortmarke:** „boardsight“ in Kleinbuchstaben, Inter SemiBold mit engem Tracking, als Pfade (keine Schriftabhängigkeit).
 - **React-Komponenten:** `BrandLogo` und `BrandSymbol` in `src/components/brand/logo.tsx`. Die Hauptfarbe folgt `currentColor`, die Akzentfarbe ist über `accentClassName` steuerbar.
 - **Dateien für den Export:** `public/brand/boardsight-logo.svg` (für helle Flächen), `public/brand/boardsight-logo-inverse.svg` (für dunkle Flächen), `public/brand/boardsight-symbol.svg`
-- **Favicon:** `src/app/icon.svg`, **OG-Bild:** `src/app/opengraph-image.tsx`
+- **Favicon:** `src/app/icon.svg`, **OG-Bild:** `src/app/opengraph-image.png` (1200 × 630 px, Alt-Text in `opengraph-image.alt.txt`)
 
 Schutzzone: mindestens die Höhe des Fadenkreuzes rund um das Logo freihalten. Auf hellem Grund `neutral-900` mit Akzent `brand-500`, auf dunklem Grund Weiss mit Akzent `accent-400`.
 
@@ -89,26 +89,34 @@ Farben stehen als CSS-Variablen in `src/app/globals.css` (`:root`) und werden in
 - Strukturierte Daten (schema.org `Organization`) im Root-Layout; nur ausgefüllte Angaben werden ausgegeben
 - `sitemap.xml` und `robots.txt` werden aus `src/app/sitemap.ts` und `src/app/robots.ts` erzeugt
 
-## Deployment auf Vercel
+## Deployment auf GitHub Pages
 
-1. Repository auf GitHub (oder GitLab/Bitbucket) pushen.
-2. Auf [vercel.com](https://vercel.com) **Add New → Project** wählen und das Repository importieren. Vercel erkennt Next.js automatisch. Liegt das Projekt in einem Unterordner, unter **Root Directory** den Ordner `website` angeben.
-3. Unter **Settings → Environment Variables** `NEXT_PUBLIC_ALLOW_INDEXING` erst dann auf `true` setzen, wenn Impressum und Datenschutz vollständig sind (sonst bleibt die Seite für Suchmaschinen gesperrt). Zudem `NEXT_PUBLIC_SITE_URL` setzen, sobald die endgültige Domain feststeht (z. B. `https://www.firma.ch`).
-4. **Deploy** auslösen. Jeder Push auf den Hauptzweig erzeugt ein neues Produktions-Deployment, andere Zweige ein Preview-Deployment.
+Die Seite wird als statische Website exportiert (`output: "export"` in `next.config.ts`). `npm run build` erzeugt den Ordner `out/`.
 
-Alternativ mit der CLI:
+Bei jedem Push auf `main` baut der Workflow `.github/workflows/deploy.yml` die Seite und veröffentlicht sie auf GitHub Pages. Die Umgebungsvariablen für den Build stehen ebenfalls im Workflow:
 
-```bash
-npx vercel        # Preview-Deployment
-npx vercel --prod # Produktions-Deployment
-```
+- `NEXT_PUBLIC_SITE_URL`: `https://boardsight.ch`
+- `NEXT_PUBLIC_ALLOW_INDEXING`: `"false"`, bis Impressum und Datenschutzerklärung vollständig sind. Danach auf `"true"` setzen und pushen.
 
-## Eigene Domain verbinden
+Einmalige Einrichtung im Repository unter **Settings → Pages**:
 
-1. Im Vercel-Projekt **Settings → Domains** öffnen und die Domain eintragen (z. B. `firma.ch` und `www.firma.ch`).
-2. Beim Domain-Anbieter die DNS-Einträge setzen, die Vercel anzeigt. Üblich sind:
-   - Apex-Domain (`firma.ch`): `A`-Eintrag auf die von Vercel angezeigte IP
-   - Subdomain (`www.firma.ch`): `CNAME` auf den von Vercel angezeigten Zielwert
-3. Festlegen, welche Variante die Hauptdomain ist; Vercel leitet die andere weiter. Das SSL-Zertifikat wird automatisch ausgestellt.
-4. `NEXT_PUBLIC_SITE_URL` auf die Hauptdomain setzen und neu deployen, damit Canonical-URLs, Sitemap und OG-Tags stimmen.
-5. Datenschutzerklärung um Angaben zum Hosting (Vercel Inc., USA) ergänzen.
+1. **Source:** „GitHub Actions“
+2. **Custom domain:** `boardsight.ch`, danach **Enforce HTTPS** aktivieren, sobald GitHub das Zertifikat ausgestellt hat
+
+Hinweis: GitHub Pages aus einem privaten Repository erfordert ein kostenpflichtiges GitHub-Abo (Pro oder Team). Mit einem kostenlosen Konto muss das Repository öffentlich sein.
+
+## Eigene Domain bei Hostpoint
+
+Im Hostpoint Control Panel unter **Domains → boardsight.ch → DNS**:
+
+| Typ | Name | Wert |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `maxmeyerx1.github.io` |
+
+Bestehende A-, AAAA- und CNAME-Einträge für `@` und `www` (z. B. von einer Parkseite) vorher löschen. Die Datei `public/CNAME` enthält die Domain und muss im Repository bleiben.
+
+Alternativ lässt sich das Projekt auch auf Vercel betreiben: Repository importieren, Umgebungsvariablen dort setzen und die Domain unter **Settings → Domains** eintragen.
