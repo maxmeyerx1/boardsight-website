@@ -2,18 +2,19 @@ import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { BrandLogo, BrandSymbol } from "@/components/brand/logo";
 
-/** Logo-Platzhalter. Durch echtes Logo (z. B. SVG in /public) ersetzen. */
+/** Logo mit Link zur Startseite, für dunkle Flächen (Header, Footer). */
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" className={cn("flex items-center gap-2.5 rounded-md", className)} aria-label={`${siteConfig.name} – zur Startseite`}>
-      <span
-        aria-hidden="true"
-        className="grid size-9 shrink-0 place-items-center rounded-lg bg-accent-400 text-xs font-bold text-brand-900"
-      >
-        Logo
-      </span>
-      <span className="truncate text-base font-bold tracking-tight text-white">{siteConfig.name}</span>
+    <Link
+      href="/"
+      className={cn("inline-flex shrink-0 items-center rounded-md text-white", className)}
+      aria-label={`${siteConfig.name} – zur Startseite`}
+    >
+      {/* Auf sehr schmalen Displays nur das Symbol, damit der Header nicht überläuft */}
+      <BrandSymbol className="h-7 min-[360px]:hidden" />
+      <BrandLogo title="" className="hidden h-6 min-[360px]:block sm:h-7 md:h-8" />
     </Link>
   );
 }

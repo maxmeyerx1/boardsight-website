@@ -31,7 +31,7 @@ export function BoardPackageButton({ className }: { className?: string }) {
   if (url) {
     return (
       <a href={url} className={classes}>
-        <FileText aria-hidden="true" />
+        <FileText aria-hidden="true" className="hidden sm:block" />
         {label}
       </a>
     );
@@ -46,7 +46,7 @@ export function BoardPackageButton({ className }: { className?: string }) {
         onClick={() => setShowHint(true)}
         className={cn(classes, "cursor-not-allowed hover:translate-y-0")}
       >
-        <FileText aria-hidden="true" />
+        <FileText aria-hidden="true" className="hidden sm:block" />
         {label}
       </button>
       <span

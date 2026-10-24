@@ -34,7 +34,7 @@ type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   /** Anzeigename im Header, Footer, Titel und OG-Bild. */
-  name: "[FIRMENNAME]",
+  name: "BoardSight",
   /** Rechtlicher Name, z. B. für Impressum und strukturierte Daten. */
   legalName: "[TODO: Rechtlicher Firmenname, z. B. Muster AG]",
   description:

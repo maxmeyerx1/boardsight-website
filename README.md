@@ -1,6 +1,6 @@
-# Firmenwebseite
+# BoardSight – Firmenwebseite
 
-Unternehmens-Webseite für **[FIRMENNAME]**, eine Schweizer Firma. Die Seite präsentiert die Firma, ihre Leistungen und den Einsatz des Werkzeugs BoardLens.
+Unternehmens-Webseite für **BoardSight**, eine Schweizer Firma. Die Seite präsentiert die Firma, ihre Leistungen und den Einsatz des Werkzeugs BoardLens.
 
 Stack: Next.js 15 (App Router), TypeScript (strict), Tailwind CSS 3, shadcn/ui (Radix), Framer Motion, Lucide-Icons.
 
@@ -66,7 +66,16 @@ Wichtig vor dem Livegang:
 - Die Kennzahlen in `stats.ts` sind Dummy-Werte (100) und müssen ersetzt oder entfernt werden.
 - Impressum und Datenschutzerklärung sind in der Schweiz Pflicht. Die Texte in `legal.ts` sind Platzhalter und müssen von einer Fachperson geprüft werden.
 - Das Kontaktformular versendet noch nichts. Der Platzhalter-Handler `submitContactForm` steht in `src/components/sections/contact.tsx` und muss durch einen echten Versand ersetzt werden (z. B. Route Handler unter `src/app/api/contact/route.ts` oder ein Formular-Dienst).
-- Logo: Platzhalter in `src/components/logo.tsx`, Favicon in `src/app/icon.svg`, OG-Bild in `src/app/opengraph-image.tsx`.
+
+## Logo
+
+- **Symbol:** zwei Gipfel auf einer Grundlinie (steigende Entwicklung, Überblick), oben rechts ein Fadenkreuz als „Sight“.
+- **Wortmarke:** „boardsight“ in Kleinbuchstaben, Inter SemiBold mit engem Tracking, als Pfade (keine Schriftabhängigkeit).
+- **React-Komponenten:** `BrandLogo` und `BrandSymbol` in `src/components/brand/logo.tsx`. Die Hauptfarbe folgt `currentColor`, die Akzentfarbe ist über `accentClassName` steuerbar.
+- **Dateien für den Export:** `public/brand/boardsight-logo.svg` (für helle Flächen), `public/brand/boardsight-logo-inverse.svg` (für dunkle Flächen), `public/brand/boardsight-symbol.svg`
+- **Favicon:** `src/app/icon.svg`, **OG-Bild:** `src/app/opengraph-image.tsx`
+
+Schutzzone: mindestens die Höhe des Fadenkreuzes rund um das Logo freihalten. Auf hellem Grund `neutral-900` mit Akzent `brand-500`, auf dunklem Grund Weiss mit Akzent `accent-400`.
 
 ## Design-Tokens
 

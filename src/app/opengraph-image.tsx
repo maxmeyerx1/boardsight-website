@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 
 import { siteConfig } from "@/config/site";
+import { WORDMARK_PATH, WORDMARK_WIDTH } from "@/components/brand/wordmark";
+
+const LOGO_WIDTH = 78 + WORDMARK_WIDTH;
 
 // OG-Bild-Platzhalter. Kann durch ein statisches Bild (app/opengraph-image.png) ersetzt werden.
 export const alt = `${siteConfig.name} – Platzhalter für das Social-Media-Vorschaubild`;
@@ -23,25 +26,16 @@ export default function OpengraphImage() {
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <div
-            style={{
-              width: 64,
-              height: 64,
-              borderRadius: 16,
-              background: "#4FB287",
-              color: "#072A1F",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 20,
-              fontWeight: 700,
-            }}
-          >
-            Logo
-          </div>
-          <div style={{ fontSize: 36, fontWeight: 700 }}>{siteConfig.name}</div>
-        </div>
+        <svg width={560} height={(560 / LOGO_WIDTH) * 66} viewBox={`0 -52 ${LOGO_WIDTH} 66`}>
+          <polygon points="26,-6.5 44,-34 62,-6.5" fill="#4FB287" />
+          <polygon points="0,-6.5 19,-46.6 38,-6.5" fill="#FFFFFF" />
+          <rect x="0" y="-3.5" width="62" height="3.5" fill="#FFFFFF" />
+          <rect x="45.5" y="-41.5" width="5.5" height="3" fill="#4FB287" />
+          <rect x="57" y="-41.5" width="5.5" height="3" fill="#4FB287" />
+          <rect x="52.5" y="-48.5" width="3" height="5.5" fill="#4FB287" />
+          <rect x="52.5" y="-37" width="3" height="5.5" fill="#4FB287" />
+          <path transform="translate(78 0)" d={WORDMARK_PATH} fill="#FFFFFF" />
+        </svg>
         <div style={{ display: "flex", fontSize: 60, fontWeight: 700, lineHeight: 1.15, maxWidth: 950 }}>
           [TODO: Kernaussage zur Firma]
         </div>
