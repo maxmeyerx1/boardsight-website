@@ -26,10 +26,8 @@ export const impressum: LegalPage = {
     {
       heading: "Verantwortlich für diese Webseite",
       paragraphs: [
-        "BoardSight [TODO: Rechtsform]",
-        "[TODO: Strasse und Nr.]",
-        "[TODO: PLZ] Zürich",
-        "Schweiz",
+        "BoardSight",
+        "Zürich, Schweiz",
       ],
     },
     {
@@ -68,7 +66,7 @@ export const datenschutz: LegalPage = {
     {
       heading: "1. Verantwortliche Stelle",
       paragraphs: [
-        "BoardSight [TODO: Rechtsform], [TODO: Strasse und Nr.], [TODO: PLZ] Zürich, Schweiz.",
+        "BoardSight, Zürich, Schweiz.",
         "Kontakt für Datenschutzanfragen: [TODO: E-Mail-Adresse]",
       ],
     },
