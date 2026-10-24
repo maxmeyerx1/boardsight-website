@@ -60,8 +60,8 @@ export const siteConfig: SiteConfig = {
     email: "info@boardsight.ch",
     /** Leer = Telefonzeile wird nicht angezeigt. */
     phone: "",
-    street: "[TODO: Strasse und Nr.]",
-    postalCode: "[TODO: PLZ]",
+    street: "Zurlindenstrasse 3",
+    postalCode: "8003",
     city: "Zürich",
     country: "Schweiz",
   },

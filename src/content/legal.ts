@@ -25,7 +25,7 @@ export const impressum: LegalPage = {
   sections: [
     {
       heading: "Verantwortlich für diese Webseite",
-      paragraphs: ["Verein BoardSight", "[TODO: Strasse und Nr.]", "[TODO: PLZ] Zürich", "Schweiz"],
+      paragraphs: ["Verein BoardSight", "Zurlindenstrasse 3", "8003 Zürich", "Schweiz"],
     },
     {
       heading: "Kontakt",
@@ -58,7 +58,7 @@ export const datenschutz: LegalPage = {
     {
       heading: "1. Verantwortliche Stelle",
       paragraphs: [
-        "Verein BoardSight, [TODO: Strasse und Nr.], [TODO: PLZ] Zürich, Schweiz.",
+        "Verein BoardSight, Zurlindenstrasse 3, 8003 Zürich, Schweiz.",
         "Kontakt für Datenschutzanfragen: info@boardsight.ch",
       ],
     },
