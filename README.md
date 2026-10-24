@@ -54,7 +54,7 @@ Alle Texte liegen unter **`src/content/`**. Sie lassen sich anpassen, ohne das L
 | `cta.ts` | Abschluss-CTA |
 | `contact.ts` | Kontaktformular (Labels, Fehlermeldungen) |
 | `footer.ts` | Footer-Texte |
-| `legal.ts` | Impressum, Datenschutz, Nutzungsbedingungen |
+| `legal.ts` | Impressum und Datenschutzerklärung |
 
 Platzhalter sind mit `[TODO: ...]` markiert. Alle offenen Stellen finden:
 
@@ -67,7 +67,7 @@ Wichtig vor dem Livegang:
 - Keine Kundenzahlen, Zertifikate, Partner oder Testimonials eintragen, die nicht belegt bzw. freigegeben sind.
 - Die Aussage „bis zu 80 % weniger Aufwand“ (`hero.ts`, `services.ts`, `stats.ts`) muss intern belegbar sein.
 - Impressum und Datenschutzerklärung sind in der Schweiz Pflicht. Die Texte in `legal.ts` sind Platzhalter und müssen von einer Fachperson geprüft werden.
-- Das Kontaktformular versendet noch nichts. Der Platzhalter-Handler `submitContactForm` steht in `src/components/sections/contact.tsx` und muss durch einen echten Versand ersetzt werden (z. B. Route Handler unter `src/app/api/contact/route.ts` oder ein Formular-Dienst).
+- Das Kontaktformular versendet selbst nichts, sondern öffnet das E-Mail-Programm mit einer vorausgefüllten Nachricht an `siteConfig.contact.email` (`openMailDraft` in `src/components/sections/contact.tsx`). Für einen direkten Versand ist ein Formular-Dienst nötig; danach Ziffer 3 der Datenschutzerklärung anpassen.
 
 ## Logo
 

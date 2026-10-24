@@ -1,6 +1,6 @@
 /**
- * Rechtstexte. Alles hier ist Platzhaltertext und muss vor dem Livegang
- * durch eine Fachperson geprüft und vervollständigt werden.
+ * Rechtstexte. Vor dem Livegang durch eine Fachperson prüfen lassen.
+ * Enthält ein Abschnitt `[TODO: ...]`, zeigt die Seite automatisch einen Hinweis an.
  */
 
 export type LegalSection = {
@@ -52,8 +52,8 @@ export const impressum: LegalPage = {
 
 export const datenschutz: LegalPage = {
   title: "Datenschutzerklärung",
-  description: "Informationen zur Bearbeitung von Personendaten auf dieser Webseite.",
-  updated: "[TODO: Datum]",
+  description: "Informationen zur Bearbeitung von Personendaten auf dieser Webseite und in BoardLens.",
+  updated: "Oktober 2026",
   sections: [
     {
       heading: "1. Verantwortliche Stelle",
@@ -63,76 +63,58 @@ export const datenschutz: LegalPage = {
       ],
     },
     {
-      heading: "2. Grundlage",
+      heading: "2. Grundsätze",
       paragraphs: [
-        "[TODO: Bezug auf das Bundesgesetz über den Datenschutz (DSG) und gegebenenfalls die DSGVO prüfen]",
+        "Wir bearbeiten Personendaten im Einklang mit dem Schweizer Bundesgesetz über den Datenschutz (DSG). Wir bearbeiten nur die Daten, die wir für den jeweiligen Zweck benötigen, und nur so lange, wie es dafür erforderlich ist oder das Gesetz es verlangt.",
       ],
     },
     {
-      heading: "3. Kontaktformular und E-Mail",
+      heading: "3. Kontaktaufnahme",
       paragraphs: [
-        "Wenn Sie uns über das Kontaktformular oder per E-Mail schreiben, bearbeiten wir Ihren Namen, Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht, um Ihre Anfrage zu beantworten.",
-        "[TODO: Aufbewahrungsdauer und eingesetzte Dienste für den Formularversand ergänzen]",
+        "Wenn Sie uns per E-Mail schreiben oder das Kontaktformular verwenden, öffnet sich Ihr eigenes E-Mail-Programm. Die Nachricht wird erst versendet, wenn Sie sie dort abschicken. Über diese Webseite selbst werden keine Formulardaten übermittelt oder gespeichert.",
+        "Wir bearbeiten Ihren Namen, Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht, um Ihre Anfrage zu beantworten. Unser E-Mail-Postfach wird von der Hostpoint AG in der Schweiz betrieben. Wir bewahren Anfragen so lange auf, wie es für die Bearbeitung und allfällige gesetzliche Aufbewahrungspflichten nötig ist.",
       ],
     },
     {
-      heading: "4. Hosting und Server-Logdateien",
+      heading: "4. Hosting dieser Webseite",
       paragraphs: [
-        "Diese Webseite: [TODO: Hosting-Anbieter und Serverstandort der Webseite angeben, z. B. Vercel Inc., USA, und die Bekanntgabe ins Ausland beschreiben.]",
-        "Software BoardLens: Die Daten unserer Kunden werden in der Schweiz gehostet. [TODO: Hosting-Anbieter und Rechenzentrum angeben.]",
-        "[TODO: Art und Aufbewahrungsdauer der Server-Logdaten]",
+        "Diese Webseite wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., USA. Beim Aufruf der Webseite verarbeitet GitHub technisch notwendige Daten wie Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs sowie Angaben zu Browser und Betriebssystem. Diese Daten dienen der Auslieferung und der Sicherheit der Webseite.",
+        "Dabei können Daten in die USA übermittelt werden. GitHub verweist in seiner Datenschutzerklärung auf das Swiss-U.S. Data Privacy Framework, das der Bundesrat für zertifizierte Unternehmen als angemessenen Datenschutz anerkannt hat.",
       ],
     },
     {
-      heading: "5. Cookies und Analyse",
+      heading: "5. Cookies, Analyse und Schriftarten",
       paragraphs: [
-        "[TODO: Angaben zu Cookies und Analyse-Tools. Aktuell sind auf dieser Webseite keine Analyse-Tools eingebunden, vor Livegang prüfen.]",
-        "Schriftarten werden lokal von dieser Webseite ausgeliefert. Es werden dafür keine Anfragen an Google gestellt.",
+        "Diese Webseite verwendet keine Cookies und keine Analyse- oder Tracking-Werkzeuge.",
+        "Schriftarten werden direkt von dieser Webseite ausgeliefert. Es werden dafür keine Anfragen an Dritte wie Google gestellt.",
       ],
     },
     {
-      heading: "6. Künstliche Intelligenz in BoardLens",
+      heading: "6. Software BoardLens",
       paragraphs: [
-        "Für Zusammenfassungen und den Board-Chat nutzt BoardLens ein Sprachmodell, das in der Schweiz betrieben wird. [TODO: Anbieter und Umfang der Datenbearbeitung angeben.]",
+        "Für Kundinnen und Kunden von BoardLens bearbeiten wir Buchhaltungs- und Finanzdaten ausschliesslich, um das vereinbarte Reporting bereitzustellen. BoardLens und die Daten unserer Kunden werden bei der Hostpoint AG in der Schweiz gehostet.",
+        "Für KI-Zusammenfassungen und den Board-Chat nutzt BoardLens das offene Sprachmodell Apertus, entwickelt von der ETH Zürich, der EPFL und dem Nationalen Hochleistungsrechenzentrum der Schweiz (CSCS). Das Modell wird in der Schweiz betrieben.",
+        "Einzelheiten zur Bearbeitung von Kundendaten regeln wir im Vertrag mit unseren Kunden.",
       ],
     },
     {
-      heading: "7. Bekanntgabe ins Ausland",
-      paragraphs: ["[TODO: Länder und Garantien bei einer Bekanntgabe ins Ausland]"],
+      heading: "7. Bekanntgabe an Dritte",
+      paragraphs: [
+        "Wir verkaufen keine Personendaten. Wir geben sie nur an Dritte weiter, wenn dies für die Erbringung unserer Leistungen nötig ist, Sie eingewilligt haben oder wir gesetzlich dazu verpflichtet sind. Eine Bekanntgabe ins Ausland erfolgt einzig beim Hosting dieser Webseite (siehe Ziffer 4).",
+      ],
     },
     {
       heading: "8. Ihre Rechte",
       paragraphs: [
-        "[TODO: Auskunft, Berichtigung, Löschung, Widerspruch, Datenherausgabe und Beschwerde beim EDÖB beschreiben]",
+        "Sie haben das Recht, Auskunft über Ihre bei uns bearbeiteten Personendaten zu verlangen, unrichtige Daten berichtigen und Daten löschen zu lassen, der Bearbeitung zu widersprechen sowie die Herausgabe Ihrer Daten zu verlangen. Wenden Sie sich dafür an info@boardsight.ch.",
+        "Sie haben zudem das Recht, sich beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) zu beschweren.",
       ],
     },
     {
       heading: "9. Änderungen",
-      paragraphs: ["[TODO: Hinweis, dass die Datenschutzerklärung angepasst werden kann]"],
-    },
-  ],
-};
-
-export const nutzungsbedingungen: LegalPage = {
-  title: "Nutzungsbedingungen",
-  description: "Bedingungen für die Nutzung dieser Webseite.",
-  updated: "[TODO: Datum]",
-  sections: [
-    {
-      heading: "1. Geltungsbereich",
-      paragraphs: ["[TODO: Geltungsbereich der Nutzungsbedingungen]"],
-    },
-    {
-      heading: "2. Inhalte der Webseite",
-      paragraphs: ["[TODO: Hinweis, dass Inhalte keine verbindliche Beratung darstellen]"],
-    },
-    {
-      heading: "3. Haftung",
-      paragraphs: ["[TODO: Haftungsbeschränkung]"],
-    },
-    {
-      heading: "4. Anwendbares Recht und Gerichtsstand",
-      paragraphs: ["[TODO: Schweizer Recht, Gerichtsstand]"],
+      paragraphs: [
+        "Wir können diese Datenschutzerklärung jederzeit anpassen. Es gilt die auf dieser Webseite veröffentlichte Fassung.",
+      ],
     },
   ],
 };

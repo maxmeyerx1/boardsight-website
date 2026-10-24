@@ -32,13 +32,15 @@ function validate(values: FormValues): FormErrors {
 }
 
 /**
- * PLATZHALTER-HANDLER: Hier wird noch nichts versendet.
- * Später ersetzen, z. B. durch einen Route Handler (src/app/api/contact/route.ts)
- * oder einen Formular-Dienst. Dabei Datenschutzerklärung entsprechend ergänzen.
+ * Die Webseite versendet selbst nichts: Das Formular öffnet das E-Mail-Programm
+ * der Besucherin oder des Besuchers mit einer vorausgefüllten Nachricht.
+ * Für einen direkten Versand später einen Formular-Dienst anbinden und die
+ * Datenschutzerklärung (Ziffer 3) anpassen.
  */
-async function submitContactForm(values: FormValues): Promise<void> {
-  void values;
-  await new Promise((resolve) => setTimeout(resolve, 800));
+function openMailDraft(values: FormValues, recipient: string) {
+  const subject = `Anfrage über boardsight.ch von ${values.name.trim()}`;
+  const body = `${values.message.trim()}\n\n${values.name.trim()}\n${values.email.trim()}`;
+  window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 export function Contact() {
@@ -56,7 +58,7 @@ export function Contact() {
     if (submitted) setErrors(validate(next));
   };
 
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSubmitted(true);
     const nextErrors = validate(values);
@@ -68,12 +70,9 @@ export function Contact() {
       return;
     }
 
-    setStatus("sending");
     try {
-      await submitContactForm(values);
+      openMailDraft(values, siteConfig.contact.email);
       setStatus("success");
-      setValues({ name: "", email: "", message: "" });
-      setSubmitted(false);
     } catch {
       setStatus("error");
     }

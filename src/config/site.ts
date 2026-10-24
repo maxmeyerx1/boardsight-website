@@ -78,6 +78,5 @@ export const siteConfig: SiteConfig = {
   legalNav: [
     { label: "Impressum", href: "/impressum" },
     { label: "Datenschutz", href: "/datenschutz" },
-    { label: "Nutzungsbedingungen", href: "/nutzungsbedingungen" },
   ],
 };

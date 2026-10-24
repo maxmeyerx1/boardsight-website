@@ -3,6 +3,10 @@ import { CircleAlert } from "lucide-react";
 import { legalNotice, type LegalPage } from "@/content/legal";
 
 export function LegalPageView({ page }: { page: LegalPage }) {
+  const hasPlaceholders = page.sections.some((section) =>
+    section.paragraphs.some((paragraph) => paragraph.includes("[TODO")),
+  );
+
   return (
     <>
       <div className="on-dark bg-brand-900 text-white">
@@ -13,14 +17,16 @@ export function LegalPageView({ page }: { page: LegalPage }) {
       </div>
       <div className="container py-14 md:py-20">
         <div className="max-w-3xl">
-          <p
-            role="note"
-            className="flex gap-3 rounded-lg border border-dashed border-brand-500 bg-neutral-50 p-4 text-sm font-medium text-neutral-900"
-          >
-            <CircleAlert className="size-5 shrink-0 text-brand-500" aria-hidden="true" />
-            {legalNotice}
-          </p>
-          <div className="mt-10 space-y-10">
+          {hasPlaceholders && (
+            <p
+              role="note"
+              className="mb-10 flex gap-3 rounded-lg border border-dashed border-brand-500 bg-neutral-50 p-4 text-sm font-medium text-neutral-900"
+            >
+              <CircleAlert className="size-5 shrink-0 text-brand-500" aria-hidden="true" />
+              {legalNotice}
+            </p>
+          )}
+          <div className="space-y-10">
             {page.sections.map((section) => (
               <section key={section.heading}>
                 <h2 className="text-xl font-bold tracking-tight md:text-2xl">{section.heading}</h2>
