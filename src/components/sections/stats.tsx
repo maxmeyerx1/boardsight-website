@@ -33,7 +33,7 @@ function Counter({ stat }: { stat: Stat }) {
   return (
     <>
       <span ref={ref} aria-hidden="true" className="tabular-nums">
-        {stat.prefix}
+        {stat.prefix && <span className="mr-1 text-2xl font-semibold text-white/80 md:text-3xl">{stat.prefix}</span>}
         {formatNumber(display)}
         {stat.suffix}
       </span>
@@ -52,7 +52,7 @@ export function Stats() {
             <div className="flex h-full flex-col-reverse items-center rounded-2xl border border-white/10 bg-white/5 px-6 py-10 text-center transition-colors duration-300 hover:border-accent-400/50 hover:bg-white/10">
               <p className="mt-3 font-medium text-white/85">
                 {stat.label}
-                <span className="mt-2 block text-sm text-accent-400">{stat.todo}</span>
+                {stat.note && <span className="mt-2 block text-sm text-accent-400">{stat.note}</span>}
               </p>
               <p className="text-5xl font-bold tracking-tight text-white md:text-6xl">
                 <Counter stat={stat} />

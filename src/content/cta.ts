@@ -1,6 +1,6 @@
 export const finalCta = {
-  title: "[TODO: Abschluss-Headline, z. B. Einladung zum Gespräch]",
-  text: "[TODO: Ein Satz, warum sich ein Gespräch lohnt.]",
+  title: "Die nächste VR-Sitzung beginnt mit aktuellen Zahlen",
+  text: "Zeigen Sie uns Ihr heutiges Reporting. Wir zeigen Ihnen, wie es mit BoardLens aussieht.",
   primary: { label: "Kontakt aufnehmen", href: "#kontakt" },
-  secondary: { label: "Häufige Fragen", href: "#faq" },
+  secondary: { label: "Preise ansehen", href: "#preise" },
 } as const;

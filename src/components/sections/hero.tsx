@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, TrendingDown } from "lucide-react";
 
 import { hero } from "@/content/hero";
 import { Button } from "@/components/ui/button";
@@ -45,6 +45,12 @@ export function Hero() {
                 <a href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
               </Button>
             </div>
+          </Reveal>
+          <Reveal delay={0.32}>
+            <p className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-accent-400">
+              <TrendingDown className="size-4" aria-hidden="true" />
+              {hero.highlight}
+            </p>
           </Reveal>
         </div>
       </div>

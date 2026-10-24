@@ -6,7 +6,9 @@ import { Process } from "@/components/sections/process";
 import { Boardlens } from "@/components/sections/boardlens";
 import { Audiences } from "@/components/sections/audiences";
 import { Stats } from "@/components/sections/stats";
-import { Team } from "@/components/sections/team";
+import { About } from "@/components/sections/about";
+import { Pricing } from "@/components/sections/pricing";
+import { Sovereignty } from "@/components/sections/sovereignty";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
@@ -22,9 +24,11 @@ export default function HomePage() {
       <Services />
       <Process />
       <Boardlens />
+      <Sovereignty />
       <Audiences />
       <Stats />
-      <Team />
+      <Pricing />
+      <About />
       <Testimonials />
       <Faq />
       <FinalCta />

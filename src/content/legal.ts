@@ -26,9 +26,9 @@ export const impressum: LegalPage = {
     {
       heading: "Verantwortlich für diese Webseite",
       paragraphs: [
-        "[TODO: Rechtlicher Firmenname, z. B. Muster AG]",
+        "BoardSight [TODO: Rechtsform]",
         "[TODO: Strasse und Nr.]",
-        "[TODO: PLZ Ort]",
+        "[TODO: PLZ] Zürich",
         "Schweiz",
       ],
     },
@@ -68,7 +68,8 @@ export const datenschutz: LegalPage = {
     {
       heading: "1. Verantwortliche Stelle",
       paragraphs: [
-        "[TODO: Rechtlicher Firmenname, Adresse und Kontakt für Datenschutzanfragen]",
+        "BoardSight [TODO: Rechtsform], [TODO: Strasse und Nr.], [TODO: PLZ] Zürich, Schweiz.",
+        "Kontakt für Datenschutzanfragen: [TODO: E-Mail-Adresse]",
       ],
     },
     {
@@ -87,7 +88,9 @@ export const datenschutz: LegalPage = {
     {
       heading: "4. Hosting und Server-Logdateien",
       paragraphs: [
-        "[TODO: Hosting-Anbieter, Standort der Server und Art der Logdaten angeben. Bei Hosting über Vercel Inc. (USA) die Bekanntgabe ins Ausland beschreiben.]",
+        "Diese Webseite: [TODO: Hosting-Anbieter und Serverstandort der Webseite angeben, z. B. Vercel Inc., USA, und die Bekanntgabe ins Ausland beschreiben.]",
+        "Software BoardLens: Die Daten unserer Kunden werden in der Schweiz gehostet. [TODO: Hosting-Anbieter und Rechenzentrum angeben.]",
+        "[TODO: Art und Aufbewahrungsdauer der Server-Logdaten]",
       ],
     },
     {
@@ -98,17 +101,23 @@ export const datenschutz: LegalPage = {
       ],
     },
     {
-      heading: "6. Bekanntgabe ins Ausland",
+      heading: "6. Künstliche Intelligenz in BoardLens",
+      paragraphs: [
+        "Für Zusammenfassungen und den Board-Chat nutzt BoardLens ein Sprachmodell, das in der Schweiz betrieben wird. [TODO: Anbieter und Umfang der Datenbearbeitung angeben.]",
+      ],
+    },
+    {
+      heading: "7. Bekanntgabe ins Ausland",
       paragraphs: ["[TODO: Länder und Garantien bei einer Bekanntgabe ins Ausland]"],
     },
     {
-      heading: "7. Ihre Rechte",
+      heading: "8. Ihre Rechte",
       paragraphs: [
         "[TODO: Auskunft, Berichtigung, Löschung, Widerspruch, Datenherausgabe und Beschwerde beim EDÖB beschreiben]",
       ],
     },
     {
-      heading: "8. Änderungen",
+      heading: "9. Änderungen",
       paragraphs: ["[TODO: Hinweis, dass die Datenschutzerklärung angepasst werden kann]"],
     },
   ],

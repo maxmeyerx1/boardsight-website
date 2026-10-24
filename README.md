@@ -40,14 +40,16 @@ Alle Texte liegen unter **`src/content/`**. Sie lassen sich anpassen, ohne das L
 | Datei | Inhalt |
 | --- | --- |
 | `hero.ts` | Headline, Subline, CTAs |
-| `trust.ts` | Logo-Leiste (Kunden/Partner) |
+| `trust.ts` | Laufband unter dem Hero (Grundsätze, später Kundenlogos) |
 | `services.ts` | Leistungen |
 | `process.ts` | Schritte „So arbeiten wir“ |
 | `boardlens.ts` | BoardLens-Abschnitt, Feature-Tabs, Beispielzahlen im Dashboard-Mockup |
+| `sovereignty.ts` | Abschnitt Schweizer Souveränität |
 | `audiences.ts` | Zielgruppen |
 | `stats.ts` | Kennzahlen (Counter) |
-| `team.ts` | Team |
-| `testimonials.ts` | Referenzen |
+| `pricing.ts` | Abos und Preise |
+| `team.ts` | Über uns, Werte, Team (leer = Team-Raster ausgeblendet) |
+| `testimonials.ts` | Referenzen (leer = Abschnitt ausgeblendet) |
 | `faq.ts` | FAQ |
 | `cta.ts` | Abschluss-CTA |
 | `contact.ts` | Kontaktformular (Labels, Fehlermeldungen) |
@@ -63,7 +65,7 @@ grep -rn "TODO" src
 Wichtig vor dem Livegang:
 
 - Keine Kundenzahlen, Zertifikate, Partner oder Testimonials eintragen, die nicht belegt bzw. freigegeben sind.
-- Die Kennzahlen in `stats.ts` sind Dummy-Werte (100) und müssen ersetzt oder entfernt werden.
+- Die Aussage „bis zu 80 % weniger Aufwand“ (`hero.ts`, `services.ts`, `stats.ts`) muss intern belegbar sein.
 - Impressum und Datenschutzerklärung sind in der Schweiz Pflicht. Die Texte in `legal.ts` sind Platzhalter und müssen von einer Fachperson geprüft werden.
 - Das Kontaktformular versendet noch nichts. Der Platzhalter-Handler `submitContactForm` steht in `src/components/sections/contact.tsx` und muss durch einen echten Versand ersetzt werden (z. B. Route Handler unter `src/app/api/contact/route.ts` oder ein Formular-Dienst).
 

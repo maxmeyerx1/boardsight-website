@@ -1,10 +1,28 @@
-import type { SectionIntro } from "./types";
+import type { IconCard, SectionIntro } from "./types";
 
-export const teamIntro: SectionIntro = {
+export const aboutIntro: SectionIntro = {
   eyebrow: "Über uns",
-  title: "[TODO: Überschrift Über uns]",
-  lead: "[TODO: Zwei bis drei Sätze zur Firma: Gründung, Standort, Haltung.]",
+  title: "BoardSight – gegründet 2026 in Zürich",
+  lead: "Wir entwickeln und betreiben BoardLens selbst, in der Schweiz. Unser Ziel: Verwaltungsräte sollen jederzeit wissen, wo ihr Unternehmen steht – ohne dass die Geschäftsleitung dafür Tage investieren muss.",
 };
+
+export const values: IconCard[] = [
+  {
+    icon: "mountain",
+    title: "Souverän",
+    text: "Daten, Software und KI bleiben in der Schweiz. Sie wissen jederzeit, wo Ihre Finanzdaten liegen.",
+  },
+  {
+    icon: "eye",
+    title: "Klar",
+    text: "Zahlen zuerst. Wenige, verständliche Kennzahlen statt hundertseitiger Board-Pakete.",
+  },
+  {
+    icon: "timer",
+    title: "Schnell",
+    text: "Aktuelle Zahlen jeden Morgen. Die Sitzung beginnt mit Entscheidungen, nicht mit der Frage nach dem neuesten Stand.",
+  },
+];
 
 export type TeamMember = {
   name: string;
@@ -13,9 +31,5 @@ export type TeamMember = {
   role: string;
 };
 
-export const team: TeamMember[] = [
-  { name: "[TODO: Name]", initials: "P1", role: "[TODO: Rolle]" },
-  { name: "[TODO: Name]", initials: "P2", role: "[TODO: Rolle]" },
-  { name: "[TODO: Name]", initials: "P3", role: "[TODO: Rolle]" },
-  { name: "[TODO: Name]", initials: "P4", role: "[TODO: Rolle]" },
-];
+/** Leer = Team-Raster wird nicht angezeigt. */
+export const team: TeamMember[] = [];

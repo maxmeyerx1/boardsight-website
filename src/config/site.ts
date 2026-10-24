@@ -36,9 +36,9 @@ export const siteConfig: SiteConfig = {
   /** Anzeigename im Header, Footer, Titel und OG-Bild. */
   name: "BoardSight",
   /** Rechtlicher Name, z. B. für Impressum und strukturierte Daten. */
-  legalName: "[TODO: Rechtlicher Firmenname, z. B. Muster AG]",
+  legalName: "BoardSight [TODO: Rechtsform, z. B. AG oder GmbH]",
   description:
-    "[TODO: Kurzbeschreibung der Firma in einem Satz, z. B. für Suchmaschinen und Social Media]",
+    "BoardSight aus Zürich verbindet Geschäftsleitung, Reporting und Verwaltungsrat. Mit BoardLens entsteht Ihr Board-Reporting automatisch aus der Buchhaltung – KI-gestützt und in der Schweiz gehostet.",
   /** Basis-URL, wird aus NEXT_PUBLIC_SITE_URL bzw. der Vercel-Umgebung gelesen. */
   url: resolveSiteUrl(),
   locale: "de-CH",
@@ -56,14 +56,15 @@ export const siteConfig: SiteConfig = {
     phone: "",
     street: "[TODO: Strasse und Nr.]",
     postalCode: "[TODO: PLZ]",
-    city: "[TODO: Ort]",
+    city: "Zürich",
     country: "Schweiz",
   },
 
   nav: [
     { label: "Leistungen", href: "/#leistungen" },
-    { label: "Über uns", href: "/#ueber-uns" },
     { label: "BoardLens", href: "/#boardlens" },
+    { label: "Preise", href: "/#preise" },
+    { label: "Über uns", href: "/#ueber-uns" },
     { label: "FAQ", href: "/#faq" },
     { label: "Kontakt", href: "/#kontakt" },
   ],

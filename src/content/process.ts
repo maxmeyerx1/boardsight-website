@@ -2,8 +2,8 @@ import type { SectionIntro } from "./types";
 
 export const processIntro: SectionIntro = {
   eyebrow: "So arbeiten wir",
-  title: "[TODO: Überschrift zum Vorgehen]",
-  lead: "[TODO: Ein Satz, wie eine Zusammenarbeit typischerweise abläuft.]",
+  title: "In wenigen Schritten zum laufenden Board-Reporting",
+  lead: "Wir begleiten Sie vom ersten Gespräch bis zur Verwaltungsratssitzung – und bleiben danach Ansprechpartner.",
 };
 
 export type ProcessStep = {
@@ -14,33 +14,33 @@ export type ProcessStep = {
 
 export const processSteps: ProcessStep[] = [
   {
-    title: "[TODO: Schritt 1, z. B. Erstgespräch]",
-    text: "[TODO: Beschreibung von Schritt 1.]",
-    points: ["[TODO: Ergebnis oder Detail]", "[TODO: Ergebnis oder Detail]"],
+    title: "Erstgespräch",
+    text: "Wir lernen Ihr Unternehmen, Ihr heutiges Reporting und die Erwartungen Ihres Verwaltungsrats kennen.",
+    points: ["Bestandesaufnahme Ihres Reportings", "Klärung von Umfang und Abo"],
   },
   {
-    title: "[TODO: Schritt 2, z. B. Analyse]",
-    text: "[TODO: Beschreibung von Schritt 2.]",
-    points: ["[TODO: Ergebnis oder Detail]", "[TODO: Ergebnis oder Detail]"],
+    title: "Buchhaltung anbinden",
+    text: "BoardLens wird mit Ihrer Buchhaltungssoftware verbunden. Die Verbindung ist verschlüsselt, BoardLens liest die Daten nur aus.",
+    points: ["Sichere, nur lesende Verbindung", "Erste Synchronisation Ihrer Daten"],
   },
   {
-    title: "[TODO: Schritt 3, z. B. bexio anbinden]",
-    text: "[TODO: Beschreibung von Schritt 3.]",
-    points: ["[TODO: Ergebnis oder Detail]", "[TODO: Ergebnis oder Detail]"],
+    title: "Kennzahlen festlegen",
+    text: "Wir stimmen die Kennzahlen und die Kontenzuordnung auf Ihr Unternehmen ab.",
+    points: ["Umsatz, Marge, EBITDA, Liquidität und mehr", "Auswahl, was der Verwaltungsrat sieht"],
   },
   {
-    title: "[TODO: Schritt 4, z. B. KPIs abstimmen]",
-    text: "[TODO: Beschreibung von Schritt 4.]",
-    points: ["[TODO: Ergebnis oder Detail]", "[TODO: Ergebnis oder Detail]"],
+    title: "Verwaltungsrat einladen",
+    text: "Die Mitglieder Ihres Verwaltungsrats erhalten einen persönlichen Zugang zur Board-Ansicht.",
+    points: ["Persönlicher Login, keine öffentlichen Links", "Nur lesender Zugriff"],
   },
   {
-    title: "[TODO: Schritt 5, z. B. Board-Reporting]",
-    text: "[TODO: Beschreibung von Schritt 5.]",
-    points: ["[TODO: Ergebnis oder Detail]", "[TODO: Ergebnis oder Detail]"],
+    title: "Laufendes Reporting",
+    text: "Ab jetzt aktualisieren sich die Zahlen täglich. KI-Zusammenfassungen gehen erst nach Freigabe durch den CFO an den Verwaltungsrat.",
+    points: ["Tägliche Aktualisierung", "Freigabe durch den CFO"],
   },
   {
-    title: "[TODO: Schritt 6, z. B. Laufende Begleitung]",
-    text: "[TODO: Beschreibung von Schritt 6.]",
-    points: ["[TODO: Ergebnis oder Detail]", "[TODO: Ergebnis oder Detail]"],
+    title: "Begleitung und Weiterentwicklung",
+    text: "Wir unterstützen Sie bei der Vorbereitung der Sitzungen und entwickeln Ihr Reporting gemeinsam weiter.",
+    points: ["Persönliche Ansprechperson", "Im Mandat: Sitzungsvorbereitung durch BoardSight"],
   },
 ];

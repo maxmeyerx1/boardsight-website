@@ -10,6 +10,11 @@ import { Section, SectionHeading } from "@/components/section";
 import { cn } from "@/lib/utils";
 
 export function Testimonials() {
+  if (testimonials.length === 0) return null;
+  return <TestimonialSlider />;
+}
+
+function TestimonialSlider() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const total = testimonials.length;

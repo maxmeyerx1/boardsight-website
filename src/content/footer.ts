@@ -1,7 +1,7 @@
 export const footer = {
-  tagline: "[TODO: Kurzer Claim zur Firma]",
+  tagline: "Board-Reporting aus der Schweiz. Automatisch, aktuell und souverän.",
   navTitle: "Navigation",
   contactTitle: "Kontakt",
   legalTitle: "Rechtliches",
-  boardlensNote: "BoardLens ist ein Werkzeug, das wir in unserer Arbeit einsetzen.",
+  boardlensNote: "BoardLens ist eine Software von BoardSight. Entwickelt in Zürich, gehostet in der Schweiz.",
 } as const;

@@ -1,22 +1,24 @@
 import type { SectionIntro } from "./types";
 
 export const statsIntro: SectionIntro = {
-  eyebrow: "Kennzahlen",
-  title: "[TODO: Überschrift Kennzahlen]",
-  lead: "[TODO: Nur belegbare Werte eintragen. Die Zahlen unten sind Platzhalter.]",
+  eyebrow: "In Zahlen",
+  title: "Weniger Aufwand, mehr Überblick",
+  lead: "Was BoardLens für Ihr Board-Reporting bedeutet.",
 };
 
 export type Stat = {
-  /** Platzhalterwert (100 = Dummy), wird animiert hochgezählt. Durch echten, belegbaren Wert ersetzen. */
+  /** Wird animiert hochgezählt. */
   value: number;
   prefix?: string;
   suffix?: string;
   label: string;
-  todo: string;
+  /** Optionale Zusatzzeile unter dem Label. */
+  note?: string;
 };
 
+// Hinweis: Die 80 % sind eine Aussage von BoardSight und sollten intern belegt sein.
 export const stats: Stat[] = [
-  { value: 100, suffix: "+", label: "[TODO: Kennzahl 1]", todo: "[TODO: echter Wert]" },
-  { value: 100, label: "[TODO: Kennzahl 2]", todo: "[TODO: echter Wert]" },
-  { value: 100, suffix: " %", label: "[TODO: Kennzahl 3]", todo: "[TODO: echter Wert]" },
+  { value: 80, prefix: "bis zu ", suffix: " %", label: "weniger Aufwand für das Board-Reporting" },
+  { value: 12, label: "Kennzahlen, automatisch berechnet" },
+  { value: 24, suffix: "/7", label: "Zugriff auf Ihre aktuellen Zahlen" },
 ];

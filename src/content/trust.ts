@@ -1,15 +1,19 @@
+import type { IconName } from "@/lib/icons";
+
 /**
- * Vertrauensleiste. Nur echte Kunden oder Partner mit Freigabe eintragen.
- * Solange keine Logos vorliegen, bleiben die Platzhalter stehen.
+ * Laufband unter dem Hero. Solange keine freigegebenen Kunden- oder
+ * Partnerlogos vorliegen, zeigt es die Grundsätze von BoardSight.
  */
 export const trust = {
-  label: "[TODO: Überschrift, z. B. „Kunden und Partner“ – nur mit Freigabe]",
-  logos: [
-    { name: "[TODO: Logo 1]" },
-    { name: "[TODO: Logo 2]" },
-    { name: "[TODO: Logo 3]" },
-    { name: "[TODO: Logo 4]" },
-    { name: "[TODO: Logo 5]" },
-    { name: "[TODO: Logo 6]" },
-  ],
-} as const;
+  label: "Gebaut für Schweizer Unternehmen und ihre Verwaltungsräte",
+  items: [
+    { icon: "mountain", text: "Entwickelt in Zürich" },
+    { icon: "server", text: "Hosting in der Schweiz" },
+    { icon: "brain", text: "Souveräne KI" },
+    { icon: "clock", text: "Zugriff rund um die Uhr" },
+    { icon: "refresh", text: "Tägliche Synchronisation" },
+    { icon: "gauge", text: "12 Kennzahlen automatisch" },
+    { icon: "shieldCheck", text: "Freigabe durch den CFO" },
+    { icon: "lock", text: "Verschlüsselte Verbindung zur Buchhaltung" },
+  ] satisfies { icon: IconName; text: string }[],
+};

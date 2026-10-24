@@ -5,8 +5,8 @@ import { WORDMARK_PATH, WORDMARK_WIDTH } from "@/components/brand/wordmark";
 
 const LOGO_WIDTH = 78 + WORDMARK_WIDTH;
 
-// OG-Bild-Platzhalter. Kann durch ein statisches Bild (app/opengraph-image.png) ersetzt werden.
-export const alt = `${siteConfig.name} – Platzhalter für das Social-Media-Vorschaubild`;
+// OG-Bild. Kann durch ein statisches Bild (app/opengraph-image.png) ersetzt werden.
+export const alt = `${siteConfig.name} – Board-Reporting aus der Schweiz`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,9 +37,9 @@ export default function OpengraphImage() {
           <path transform="translate(78 0)" d={WORDMARK_PATH} fill="#FFFFFF" />
         </svg>
         <div style={{ display: "flex", fontSize: 60, fontWeight: 700, lineHeight: 1.15, maxWidth: 950 }}>
-          [TODO: Kernaussage zur Firma]
+          Ihr Board-Reporting. Automatisch, aktuell, aus der Schweiz.
         </div>
-        <div style={{ display: "flex", fontSize: 24, color: "#4FB287" }}>Platzhalter – OG-Bild</div>
+        <div style={{ display: "flex", fontSize: 26, color: "#4FB287" }}>BoardLens · Entwickelt in Zürich · Gehostet in der Schweiz</div>
       </div>
     ),
     size,

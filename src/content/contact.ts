@@ -1,7 +1,7 @@
 export const contact = {
   eyebrow: "Kontakt",
-  title: "[TODO: Überschrift Kontakt]",
-  lead: "[TODO: Ein Satz, wie schnell Sie antworten und wer sich meldet.]",
+  title: "Lassen Sie uns sprechen",
+  lead: "Erzählen Sie uns von Ihrem Reporting und Ihrem Verwaltungsrat. Wir melden uns persönlich bei Ihnen – für ein Gespräch oder eine Offerte.",
   fields: {
     name: { label: "Name", placeholder: "Vorname Nachname" },
     email: { label: "E-Mail", placeholder: "name@firma.ch" },

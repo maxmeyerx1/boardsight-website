@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { RefreshCw, Sparkles, ShieldCheck } from "lucide-react";
+import { MessagesSquare, RefreshCw, Sparkles, ShieldCheck } from "lucide-react";
 
 import { dashboardMockup, type BoardlensFeatureId } from "@/content/boardlens";
 import { formatCHFCompact, formatPercent } from "@/lib/format";
@@ -51,7 +51,7 @@ export function DashboardMockup({ active }: { active: BoardlensFeatureId }) {
         className="relative overflow-hidden rounded-2xl border border-brand-700 bg-brand-900 p-3 text-white shadow-2xl sm:p-5"
       >
         <div className="absolute right-3 top-3 rounded-full bg-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-900 sm:right-5 sm:top-5">
-          Platzhalter
+          Beispiel
         </div>
 
         {/* Kopfzeile mit Sync-Status */}
@@ -111,6 +111,20 @@ export function DashboardMockup({ active }: { active: BoardlensFeatureId }) {
             </p>
           </Region>
         </div>
+
+        {/* Board-Chat */}
+        <Region id="chat" active={active} className="mt-3 space-y-2 bg-white/5 p-3">
+          <p className="flex items-center gap-1.5 text-[11px] font-semibold text-white/80">
+            <MessagesSquare className="size-3.5 text-accent-400" />
+            Board-Chat
+          </p>
+          <p className="ml-auto w-fit max-w-[85%] rounded-xl rounded-br-sm bg-accent-400 px-3 py-1.5 text-xs font-medium text-brand-900">
+            {dashboardMockup.chatQuestion}
+          </p>
+          <p className="w-fit max-w-[85%] rounded-xl rounded-bl-sm bg-white/10 px-3 py-1.5 text-xs leading-relaxed text-white/85">
+            {dashboardMockup.chatAnswer}
+          </p>
+        </Region>
       </div>
       <figcaption className="mt-3 text-center text-sm text-neutral-600">{dashboardMockup.placeholderLabel}</figcaption>
     </figure>
