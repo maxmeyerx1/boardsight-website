@@ -1,4 +1,6 @@
-import { aboutIntro, team, values } from "@/content/team";
+import { Quote } from "lucide-react";
+
+import { aboutIntro, aboutQuote, aboutStory, team, values } from "@/content/team";
 import { icons } from "@/lib/icons";
 import { Reveal } from "@/components/reveal";
 import { Section, SectionHeading } from "@/components/section";
@@ -6,9 +8,25 @@ import { Section, SectionHeading } from "@/components/section";
 export function About() {
   return (
     <Section id="ueber-uns" tone="light" labelledBy="ueber-uns-title">
-      <div className="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
-        <SectionHeading intro={aboutIntro} headingId="ueber-uns-title" tone="light" />
-        <ul className="grid gap-5 sm:grid-cols-3">
+      <div className="grid gap-12 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16">
+        <div>
+          <SectionHeading intro={aboutIntro} headingId="ueber-uns-title" tone="light" />
+          <Reveal delay={0.08} className="mt-6 max-w-2xl space-y-4 leading-relaxed text-neutral-600">
+            {aboutStory.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </Reveal>
+          <Reveal delay={0.16}>
+            <figure className="mt-10 max-w-2xl rounded-2xl bg-brand-700 p-6 text-white md:p-8">
+              <Quote className="size-7 text-accent-400" aria-hidden="true" />
+              <blockquote className="mt-4 text-balance text-xl font-semibold leading-snug md:text-2xl">
+                <p>{aboutQuote.text}</p>
+              </blockquote>
+              <figcaption className="mt-4 text-sm font-medium text-accent-400">{aboutQuote.label}</figcaption>
+            </figure>
+          </Reveal>
+        </div>
+        <ul className="grid content-start gap-5 sm:grid-cols-3 lg:grid-cols-1">
           {values.map((value, index) => {
             const Icon = icons[value.icon];
             return (
