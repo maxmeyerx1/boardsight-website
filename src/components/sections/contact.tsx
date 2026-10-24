@@ -119,16 +119,14 @@ export function Contact() {
                 <span>[TODO: E-Mail-Adresse]</span>
               )}
             </p>
-            <p className="flex gap-3">
-              <Phone className="mt-0.5 size-5 shrink-0 text-brand-500" aria-hidden="true" />
-              {info.phone ? (
+            {info.phone && (
+              <p className="flex gap-3">
+                <Phone className="mt-0.5 size-5 shrink-0 text-brand-500" aria-hidden="true" />
                 <a href={`tel:${info.phone.replace(/\s/g, "")}`} className="font-medium hover:text-brand-500">
                   {info.phone}
                 </a>
-              ) : (
-                <span>[TODO: Telefonnummer]</span>
-              )}
-            </p>
+              </p>
+            )}
             <p className="flex gap-3">
               <MapPin className="mt-0.5 size-5 shrink-0 text-brand-500" aria-hidden="true" />
               <span>

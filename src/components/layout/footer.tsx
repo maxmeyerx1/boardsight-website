@@ -55,16 +55,14 @@ export function Footer() {
                 <span>[TODO: E-Mail-Adresse]</span>
               )}
             </p>
-            <p className="flex gap-2">
-              <Phone className="mt-0.5 size-4 shrink-0 text-accent-400" aria-hidden="true" />
-              {contact.phone ? (
+            {contact.phone && (
+              <p className="flex gap-2">
+                <Phone className="mt-0.5 size-4 shrink-0 text-accent-400" aria-hidden="true" />
                 <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="transition-colors hover:text-white">
                   {contact.phone}
                 </a>
-              ) : (
-                <span>[TODO: Telefonnummer]</span>
-              )}
-            </p>
+              </p>
+            )}
           </address>
         </div>
 

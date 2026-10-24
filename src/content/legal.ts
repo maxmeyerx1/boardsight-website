@@ -21,39 +21,31 @@ export const legalNotice =
 export const impressum: LegalPage = {
   title: "Impressum",
   description: "Angaben zum Anbieter dieser Webseite.",
-  updated: "[TODO: Datum]",
+  updated: "Oktober 2026",
   sections: [
     {
       heading: "Verantwortlich für diese Webseite",
-      paragraphs: [
-        "BoardSight",
-        "Zürich, Schweiz",
-      ],
+      paragraphs: ["Verein BoardSight", "[TODO: Strasse und Nr.]", "[TODO: PLZ] Zürich", "Schweiz"],
     },
     {
       heading: "Kontakt",
-      paragraphs: ["E-Mail: [TODO: E-Mail-Adresse]", "Telefon: [TODO: Telefonnummer]"],
-    },
-    {
-      heading: "Vertretungsberechtigte Personen",
-      paragraphs: ["[TODO: Name, Funktion]"],
-    },
-    {
-      heading: "Handelsregister",
-      paragraphs: [
-        "Eingetragener Firmenname: [TODO]",
-        "Handelsregisteramt: [TODO: Kanton]",
-        "Unternehmens-Identifikationsnummer (UID): [TODO: CHE-xxx.xxx.xxx]",
-        "Mehrwertsteuernummer: [TODO: CHE-xxx.xxx.xxx MWST, falls vorhanden]",
-      ],
+      paragraphs: ["E-Mail: info@boardsight.ch"],
     },
     {
       heading: "Haftungsausschluss",
-      paragraphs: ["[TODO: Haftungsausschluss für Inhalte und Links]"],
+      paragraphs: [
+        "Wir stellen die Inhalte dieser Webseite mit grösster Sorgfalt zusammen. Für die Richtigkeit, Vollständigkeit und Aktualität der Informationen übernehmen wir jedoch keine Gewähr. Die Inhalte dienen der allgemeinen Information und stellen keine verbindliche Beratung oder Offerte dar.",
+        "Soweit gesetzlich zulässig, haftet der Verein BoardSight nicht für Schäden materieller oder immaterieller Art, die durch den Zugriff auf die Inhalte, deren Nutzung oder Nichtnutzung, durch Missbrauch der Verbindung oder durch technische Störungen entstehen.",
+        "Wir behalten uns vor, Inhalte dieser Webseite jederzeit und ohne Ankündigung zu ändern, zu ergänzen oder zu entfernen sowie die Veröffentlichung ganz oder teilweise einzustellen.",
+        "Diese Webseite kann Links zu Webseiten Dritter enthalten. Auf deren Inhalte haben wir keinen Einfluss, verantwortlich ist ausschliesslich der jeweilige Betreiber. Der Besuch solcher Webseiten erfolgt auf eigenes Risiko.",
+      ],
     },
     {
       heading: "Urheberrechte",
-      paragraphs: ["[TODO: Hinweis zu Urheberrechten an Texten, Bildern und Marken]"],
+      paragraphs: [
+        "Texte, Grafiken, Logos, Bilder und alle weiteren Inhalte dieser Webseite sind urheberrechtlich geschützt und gehören dem Verein BoardSight oder den ausdrücklich genannten Rechteinhabern.",
+        "Jede Vervielfältigung, Verbreitung oder Veränderung, ganz oder in Teilen, bedarf der vorgängigen schriftlichen Zustimmung. Die Namen BoardSight und BoardLens sowie die zugehörigen Logos dürfen ohne Erlaubnis nicht verwendet werden.",
+      ],
     },
   ],
 };
@@ -66,8 +58,8 @@ export const datenschutz: LegalPage = {
     {
       heading: "1. Verantwortliche Stelle",
       paragraphs: [
-        "BoardSight, Zürich, Schweiz.",
-        "Kontakt für Datenschutzanfragen: [TODO: E-Mail-Adresse]",
+        "Verein BoardSight, [TODO: Strasse und Nr.], [TODO: PLZ] Zürich, Schweiz.",
+        "Kontakt für Datenschutzanfragen: info@boardsight.ch",
       ],
     },
     {
