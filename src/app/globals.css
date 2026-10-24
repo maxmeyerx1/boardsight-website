@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design-Tokens (RGB-Kanäle). Hex-Werte als Referenz:
+ *   brand-900   #072A1F  dunkelster Hintergrund
+ *   brand-700   #0B3B2C  Primärfarbe, Buttons, dunkle Header
+ *   brand-500   #1F6B4F  Hover, Sekundärelemente, Akzenttext auf Hell
+ *   accent-400  #4FB287  Akzent, nur auf dunklem Grund oder als Fläche
+ *   neutral-50  #F4F7F5  heller Hintergrund
+ *   neutral-600 #4A5D54  gedämpfter Text auf Hell
+ *   neutral-900 #0E1F18  Fliesstext
+ *
+ * Geprüfte Kontraste (WCAG AA, normaler Text >= 4.5:1):
+ *   neutral-900 auf neutral-50 ........ 15.9:1
+ *   neutral-600 auf neutral-50/weiss .. 6.5:1 / 7.0:1
+ *   brand-500 auf neutral-50 .......... 5.9:1
+ *   weiss auf brand-700 / brand-900 ... 11.7:1 / 14.6:1
+ *   weiss auf brand-500 (Hover) ....... 6.4:1
+ *   accent-400 auf brand-900 .......... 5.9:1
+ *   accent-400 auf brand-700 .......... 4.8:1
+ *   brand-900 auf accent-400 .......... 5.9:1
+ *   accent-400 auf neutral-50 ......... 2.4:1  -> nicht für Text verwenden
+ */
+@layer base {
+  :root {
+    --brand-900: 7 42 31;
+    --brand-700: 11 59 44;
+    --brand-500: 31 107 79;
+    --accent-400: 79 178 135;
+    --neutral-50: 244 247 245;
+    --neutral-100: 231 238 234;
+    --neutral-200: 213 224 218;
+    --neutral-300: 124 143 134;
+    --neutral-600: 74 93 84;
+    --neutral-900: 14 31 24;
+    --danger-600: 180 35 24;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-neutral-900 antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Anker-Ziele nicht unter dem Sticky-Header verstecken */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-400 ring-offset-2 ring-offset-white;
+  }
+
+  .on-dark :focus-visible {
+    @apply ring-offset-brand-900;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
