@@ -3,7 +3,7 @@ import type { IconCard, SectionIntro } from "./types";
 export const audiencesIntro: SectionIntro = {
   eyebrow: "Für wen wir arbeiten",
   title: "Für Schweizer Unternehmen jeder Grösse",
-  lead: "Entscheidend ist nicht die Grösse, sondern eine digitale Buchhaltung wie bexio, Abacus oder vergleichbare Lösungen – und ein Verwaltungsrat, der verlässliche Zahlen braucht.",
+  lead: "Entscheidend ist nicht die Grösse, sondern eine digitale Buchhaltung wie bexio, Abacus oder vergleichbare Lösungen und ein Verwaltungsrat, der verlässliche Zahlen braucht.",
 };
 
 export const audiences: IconCard[] = [

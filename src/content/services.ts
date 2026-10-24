@@ -3,7 +3,7 @@ import type { IconCard, SectionIntro } from "./types";
 export const servicesIntro: SectionIntro = {
   eyebrow: "Leistungen",
   title: "Wir machen Reporting zur Nebensache",
-  lead: "Board-Reporting kostet Finanzverantwortliche heute oft mehrere Arbeitstage pro Sitzung: Daten exportieren, in Excel rechnen, in Präsentationen übertragen. Wir automatisieren diesen Weg – und senken den Aufwand um bis zu 80 %.",
+  lead: "Board-Reporting kostet Finanzverantwortliche heute oft mehrere Arbeitstage pro Sitzung: Daten exportieren, in Excel rechnen, in Präsentationen übertragen. Wir automatisieren diesen Weg und senken den Aufwand um bis zu 80 %.",
 };
 
 // Hinweis: Die 80 % sind eine Aussage von BoardSight und sollten intern belegt sein.
@@ -12,7 +12,7 @@ export const services: IconCard[] = [
   {
     icon: "zap",
     title: "Laufendes Instant Reporting",
-    text: "BoardLens holt die Zahlen täglich aus Ihrer Buchhaltung und berechnet die Kennzahlen automatisch. Der Report ist immer aktuell – nicht erst kurz vor der Sitzung.",
+    text: "BoardLens holt die Zahlen täglich aus Ihrer Buchhaltung und berechnet die Kennzahlen automatisch. Der Report ist immer aktuell, nicht erst kurz vor der Sitzung.",
   },
   {
     icon: "sparkles",
@@ -27,6 +27,6 @@ export const services: IconCard[] = [
   {
     icon: "handshake",
     title: "Reporting-Mandat",
-    text: "Auf Wunsch übernehmen wir das Mandat als Schnittstelle zwischen Geschäftsleitung, Reporting und Verwaltungsrat – von der Einrichtung bis zur Sitzungsvorbereitung.",
+    text: "Auf Wunsch übernehmen wir das Mandat als Schnittstelle zwischen Geschäftsleitung, Reporting und Verwaltungsrat, von der Einrichtung bis zur Sitzungsvorbereitung.",
   },
 ];

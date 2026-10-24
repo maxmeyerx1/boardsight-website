@@ -6,7 +6,7 @@ import { WORDMARK_PATH, WORDMARK_WIDTH } from "@/components/brand/wordmark";
 const LOGO_WIDTH = 78 + WORDMARK_WIDTH;
 
 // OG-Bild. Kann durch ein statisches Bild (app/opengraph-image.png) ersetzt werden.
-export const alt = `${siteConfig.name} – Board-Reporting aus der Schweiz`;
+export const alt = `${siteConfig.name}: Board-Reporting aus der Schweiz`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

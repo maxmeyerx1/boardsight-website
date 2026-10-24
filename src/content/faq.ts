@@ -3,7 +3,7 @@ import type { SectionIntro } from "./types";
 export const faqIntro: SectionIntro = {
   eyebrow: "FAQ",
   title: "Häufige Fragen",
-  lead: "Ihre Frage ist nicht dabei? Schreiben Sie uns – wir antworten persönlich.",
+  lead: "Ihre Frage ist nicht dabei? Schreiben Sie uns, wir antworten persönlich.",
 };
 
 export type FaqItem = { question: string; answer: string };
@@ -22,7 +22,7 @@ export const faq: FaqItem[] = [
   {
     question: "Mit welcher Buchhaltungssoftware funktioniert BoardLens?",
     answer:
-      "BoardLens ist an bexio angebunden. Für Abacus und weitere Buchhaltungslösungen sprechen Sie uns an – wir prüfen die Anbindung für Ihr Unternehmen.",
+      "BoardLens ist an bexio angebunden. Für Abacus und weitere Buchhaltungslösungen sprechen Sie uns an. Wir prüfen die Anbindung für Ihr Unternehmen.",
   },
   {
     question: "Wie funktioniert die Anbindung an bexio?",
@@ -37,7 +37,7 @@ export const faq: FaqItem[] = [
   {
     question: "Wie sicher sind unsere Finanzdaten?",
     answer:
-      "Die Verbindung zur Buchhaltung ist verschlüsselt und nur lesend. Der Zugang zu BoardLens erfolgt über persönliche Logins – es gibt keine öffentlichen Links. Der CFO bestimmt, welche Kennzahlen der Verwaltungsrat sieht.",
+      "Die Verbindung zur Buchhaltung ist verschlüsselt und nur lesend. Der Zugang zu BoardLens erfolgt über persönliche Logins, öffentliche Links gibt es keine. Der CFO bestimmt, welche Kennzahlen der Verwaltungsrat sieht.",
   },
   {
     question: "Was kostet BoardLens?",

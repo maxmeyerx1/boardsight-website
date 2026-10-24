@@ -3,7 +3,7 @@ import type { IconCard, SectionIntro } from "./types";
 export const sovereigntyIntro: SectionIntro = {
   eyebrow: "Schweizer Souveränität",
   title: "Ihre Finanzdaten bleiben in der Schweiz",
-  lead: "Finanzzahlen gehören zu den sensibelsten Daten eines Unternehmens. Deshalb setzen wir konsequent auf Souveränität: Software, Daten und KI – alles in der Schweiz.",
+  lead: "Finanzzahlen gehören zu den sensibelsten Daten eines Unternehmens. Deshalb setzen wir konsequent auf Souveränität: Software, Daten und KI bleiben in der Schweiz.",
 };
 
 export const sovereigntyPillars: IconCard[] = [
@@ -20,7 +20,7 @@ export const sovereigntyPillars: IconCard[] = [
   {
     icon: "clock",
     title: "Zugriff rund um die Uhr",
-    text: "Ihr Verwaltungsrat sieht die aktuellen Zahlen jederzeit – 24 Stunden am Tag, 7 Tage die Woche.",
+    text: "Ihr Verwaltungsrat sieht die aktuellen Zahlen jederzeit: 24 Stunden am Tag, 7 Tage die Woche.",
   },
   {
     icon: "key",

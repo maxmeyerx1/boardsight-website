@@ -3,7 +3,7 @@ import type { SectionIntro } from "./types";
 export const processIntro: SectionIntro = {
   eyebrow: "So arbeiten wir",
   title: "In wenigen Schritten zum laufenden Board-Reporting",
-  lead: "Wir begleiten Sie vom ersten Gespräch bis zur Verwaltungsratssitzung – und bleiben danach Ansprechpartner.",
+  lead: "Wir begleiten Sie vom ersten Gespräch bis zur Verwaltungsratssitzung und bleiben auch danach Ihr Ansprechpartner.",
 };
 
 export type ProcessStep = {

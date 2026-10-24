@@ -40,7 +40,7 @@ export const boardlensFeatures: BoardlensFeature[] = [
     tab: "KPIs",
     icon: "gauge",
     title: "Standardisierte Kennzahlen, automatisch berechnet",
-    text: "Aus Ihren Buchungen berechnet BoardLens einheitliche Kennzahlen – mit Trend zum Vormonat und Verlauf über zwölf Monate.",
+    text: "Aus Ihren Buchungen berechnet BoardLens einheitliche Kennzahlen, mit Trend zum Vormonat und Verlauf über zwölf Monate.",
     points: [
       "Umsatz, Bruttomarge und EBITDA",
       "Liquidität, Burn Rate und Nettoumlaufvermögen",
@@ -52,7 +52,7 @@ export const boardlensFeatures: BoardlensFeature[] = [
     tab: "Board-Ansicht",
     icon: "layoutDashboard",
     title: "Eine klare Ansicht für den Verwaltungsrat",
-    text: "Der Verwaltungsrat sieht dieselben Zahlen wie der CFO – übersichtlich, lesend und bereit für die Projektion in der Sitzung. Rund um die Uhr, von überall.",
+    text: "Der Verwaltungsrat sieht dieselben Zahlen wie der CFO: übersichtlich, lesend und bereit für die Projektion in der Sitzung. Rund um die Uhr, von überall.",
     points: [
       "Persönlicher Zugang, keine öffentlichen Links",
       "Der CFO bestimmt, welche Kennzahlen sichtbar sind",
@@ -64,7 +64,7 @@ export const boardlensFeatures: BoardlensFeature[] = [
     tab: "Zusammenfassungen",
     icon: "sparkles",
     title: "KI-Zusammenfassungen mit Freigabe durch den CFO",
-    text: "BoardLens fasst die Entwicklung in wenigen sachlichen Sätzen zusammen – ohne Spekulationen und Prognosen. Der CFO prüft jede Zusammenfassung und gibt sie frei.",
+    text: "BoardLens fasst die Entwicklung in wenigen sachlichen Sätzen zusammen, ohne Spekulationen und Prognosen. Der CFO prüft jede Zusammenfassung und gibt sie frei.",
     points: [
       "Kurz, sachlich, auf Schweizer Hochdeutsch",
       "Sichtbar für den Verwaltungsrat erst nach Freigabe",

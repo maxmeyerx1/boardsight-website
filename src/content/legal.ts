@@ -96,7 +96,7 @@ export const datenschutz: LegalPage = {
     {
       heading: "5. Cookies und Analyse",
       paragraphs: [
-        "[TODO: Angaben zu Cookies und Analyse-Tools. Aktuell sind auf dieser Webseite keine Analyse-Tools eingebunden – vor Livegang prüfen.]",
+        "[TODO: Angaben zu Cookies und Analyse-Tools. Aktuell sind auf dieser Webseite keine Analyse-Tools eingebunden, vor Livegang prüfen.]",
         "Schriftarten werden lokal von dieser Webseite ausgeliefert. Es werden dafür keine Anfragen an Google gestellt.",
       ],
     },

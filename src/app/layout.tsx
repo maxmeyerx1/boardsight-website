@@ -8,7 +8,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MotionProvider } from "@/components/motion-provider";
 
-// next/font liefert die Schrift lokal aus – keine Anfragen an Google zur Laufzeit.
+// next/font liefert die Schrift lokal aus, ohne Anfragen an Google zur Laufzeit.
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
 
 export const metadata: Metadata = {

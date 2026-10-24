@@ -1,7 +1,7 @@
 export const contact = {
   eyebrow: "Kontakt",
   title: "Lassen Sie uns sprechen",
-  lead: "Erzählen Sie uns von Ihrem Reporting und Ihrem Verwaltungsrat. Wir melden uns persönlich bei Ihnen – für ein Gespräch oder eine Offerte.",
+  lead: "Erzählen Sie uns von Ihrem Reporting und Ihrem Verwaltungsrat. Wir melden uns persönlich bei Ihnen, für ein Gespräch oder eine Offerte.",
   fields: {
     name: { label: "Name", placeholder: "Vorname Nachname" },
     email: { label: "E-Mail", placeholder: "name@firma.ch" },
@@ -19,6 +19,6 @@ export const contact = {
   privacyLinkLabel: "Datenschutzerklärung",
   submit: "Nachricht senden",
   sending: "Wird gesendet …",
-  success: "Vielen Dank. Ihre Nachricht ist bei uns eingegangen. [TODO: Platzhalter – der Versand ist noch nicht angebunden.]",
+  success: "Vielen Dank. Ihre Nachricht ist bei uns eingegangen. [TODO: Platzhalter, der Versand ist noch nicht angebunden.]",
   failure: "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
 } as const;
