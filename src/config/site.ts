@@ -54,7 +54,7 @@ export const siteConfig: SiteConfig = {
    * Leer = Button sichtbar, aber ohne Ziel (Hinweis „Bald verfügbar“).
    * Gesetzt = Button öffnet die URL im selben Tab.
    */
-  boardPackageUrl: "",
+  boardPackageUrl: "https://app.boardsight.ch",
 
   contact: {
     email: "info@boardsight.ch",
